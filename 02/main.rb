@@ -12,6 +12,7 @@
 #
 # NEW
 #   information.instance_variables
+# We forgot to add workshop as an instance variable. But were referencing it later so must define it
 
 require 'pry-byebug'
 
@@ -19,7 +20,7 @@ class Information
   def initialize(language, version, workshop)
     @language = language
     @version = version
-    workshop = workshop
+    @workshop = workshop
   end
 
   def to_s
