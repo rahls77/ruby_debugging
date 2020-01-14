@@ -15,8 +15,9 @@ require_relative 'dependencies/cool_formatter.rb'
 require_relative 'dependencies/workshop_formatter.rb'
 
 class Information
-  include CoolFormatter
   include WorkshopFormatter
+  include CoolFormatter
+  
 
   attr_reader :language, :version, :workshop
 

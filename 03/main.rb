@@ -16,7 +16,7 @@ require 'pry-byebug'
 require_relative 'dependencies/cool_formatter.rb'
 
 class Information
-  include CoolFormatter # What is going on here?
+  include CoolFormatter # What is going on here?\
   attr_accessor :language, :version, :workshop
 
   def initialize(language, version, workshop)
@@ -29,4 +29,4 @@ end
 information = Information.new('Ruby', '2.6.2', 'Ruby debugging')
 
 binding.pry # This is our breakpoint, the program will stop executing here
-information.display_info(information.language, information.version, information.workshop)
+information.display_info
