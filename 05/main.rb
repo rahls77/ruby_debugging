@@ -8,16 +8,24 @@
 # USEFUL
 #   Information.singleton_class.ancestors
 
+=begin
+extend adds class methods
+include adds instance methods
+
+
+=end
+
 require 'pry-byebug'
 require_relative 'dependencies/cool_logger.rb'
 
 class Information
   extend CoolLogger
+  attr_reader :language, :version, :workshop
 
   class << self # What is this?
     def log(language, version, workshop)
       puts "Start logging..."
-      super
+      super(language, version)
       new(language, version, workshop)
     end
   end
