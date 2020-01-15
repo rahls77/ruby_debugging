@@ -10,7 +10,13 @@
 #   information.methods.grep /something/
 
 require 'pry-byebug'
-Dir["./dependencies/*.rb"].each {|file| require file }
+require_relative 'dependencies/one.rb'
+require_relative 'dependencies/two.rb'
+require_relative 'dependencies/three.rb'
+require_relative 'dependencies/four.rb'
+require_relative 'dependencies/five.rb'
+
+
 
 class Information
   include One
@@ -28,7 +34,7 @@ class Information
   end
 
   def log
-    please_log_this(language, version, workshop)
+    i_can_log(language, version, workshop)
   end
 end
 
